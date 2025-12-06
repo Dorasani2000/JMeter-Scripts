@@ -20,7 +20,7 @@ pipeline {
             steps {
                 bat """
                 docker run --rm -v %cd%\\:/tests -w /tests ${IMAGE_NAME} ^
-                -n -t Account_Summary_Balance.jmx -l results.jtl -j Jmeter.log
+                -n -t Account_Summary_Balance.jmx -l results.jtl -j jmeter.log
                 """
             }
         }
@@ -28,7 +28,7 @@ pipeline {
         stage('Archive Results') {
             steps {
                 archiveArtifacts artifacts: 'results.jtl, report/**', allowEmptyArchive: true
-                archiveArtifacts artifacts: 'Jmeter.log, report/**', allowEmptyArchive: true
+                archiveArtifacts artifacts: 'jmeter.log, report/**', allowEmptyArchive: true
             }
         }
 
