@@ -610,7 +610,7 @@ log.info(&quot;Account Number:&quot;  +accountno);
 log.info(&quot;Balance:&quot;   +balance);</stringProp>
               </JSR223PostProcessor>
               <hashTree/>
-              <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer">
                 <stringProp name="ConstantTimer.delay">3000</stringProp>
               </ConstantTimer>
               <hashTree/>
