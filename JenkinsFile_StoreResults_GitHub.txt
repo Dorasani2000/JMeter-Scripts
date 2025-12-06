@@ -27,7 +27,7 @@ pipeline {
 
         stage('Archive Results') {
             steps {
-                archiveArtifacts artifacts: 'JMX_Files/results.jtl, report/**', allowEmptyArchive: true
+                archiveArtifacts artifacts: results.jtl, report/**', allowEmptyArchive: true
             }
         }
 
@@ -41,7 +41,7 @@ pipeline {
                     )
                 ]) {
                     bat """
-                    git config --global user.email "Chandu143.cy@gmail.com"
+                    git config --global user.email "dorasanammagumparlapati@gmail.com"
                     git config --global user.name "chanduyadav143"
 
                     rem Pull latest changes first
