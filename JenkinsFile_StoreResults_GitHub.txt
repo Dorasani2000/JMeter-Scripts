@@ -42,7 +42,7 @@ pipeline {
                 ]) {
                     bat """
                     git config --global user.email "dorasanammagumparlapati@gmail.com"
-                    git config --global user.name "chanduyadav143"
+                    git config --global user.name "Dorasani2000"
 
                     rem Pull latest changes first
                     git pull https://%GIT_USER%:%GIT_PASS%@github.com/chanduyadav143/JMeter-Scripts.git main
