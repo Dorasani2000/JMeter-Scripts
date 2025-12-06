@@ -45,21 +45,21 @@ pipeline {
                     git config --global user.name "Dorasani2000"
 
                     rem Pull latest changes first
-                    git pull https://%GIT_USER%:%GIT_PASS%@github.com/chanduyadav143/JMeter-Scripts.git main
+                    git pull https://%GIT_USER%:%GIT_PASS%@github.com/Dorasani2000/JMeter-Scripts.git main
 
                     rem Create results folder if not exists
                     if not exist results mkdir results
 
                     rem Append build number to results file and folder
                     set BUILD_NUM=%BUILD_NUMBER%
-                    copy /Y JMX_Files\\results.jtl results\\results_%BUILD_NUM%.jtl
+                    copy /Y results.jtl results\\results_%BUILD_NUM%.jtl
                     xcopy /E /I /Y report results\\report_%BUILD_NUM%
 
                     git add results\\
 
                     git commit -m "Automated: Add latest JMeter results for build #%BUILD_NUM%" || echo Nothing to commit
 
-                    git push https://%GIT_USER%:%GIT_PASS%@github.com/chanduyadav143/JMeter-Scripts.git main
+                    git push https://%GIT_USER%:%GIT_PASS%@github.com/Dorasani2000/JMeter-Scripts.git main
                     """
                 }
             }
